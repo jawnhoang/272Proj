@@ -2,16 +2,17 @@
 <html>
     <header>
         <link rel="stylesheet" href="src/css/contact.css">
+        <link rel="stylesheet" href="src/css/style.css">
         <title>Contact JH Kits</title>
         <?php include 'header.php'; ?>
     </header>
     <body>
-        <div class="card" id="contactcard">
-            <div class="ccard">
+        <div class="cardrow" id="contactcard">
+            <div class="infocard">
                 <h1 class="contact-header">
                     Contact Us At:
                 </h1>
-                <p>
+                <p id='php-read-contact-file'>
                     <?php
                     $myfile = fopen("jhkitcontacts.txt", "r");
                         if($myfile == false){

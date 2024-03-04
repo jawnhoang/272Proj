@@ -1,10 +1,10 @@
+<?php include 'header.php'; ?>
 <!DOCTYPE>
 <html>
     <header>
         <link rel="stylesheet" href="src/css/contact.css">
         <link rel="stylesheet" href="src/css/style.css">
         <title>Contact JH Kits</title>
-        <?php include 'header.php'; ?>
     </header>
     <body>
         <div class="cardrow" id="contactcard">

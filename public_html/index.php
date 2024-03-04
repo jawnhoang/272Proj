@@ -1,3 +1,4 @@
+<?php include 'header.php'; ?>
 <!DOCTYPE html>
 <html>
 
@@ -6,8 +7,6 @@
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" href="src/css/style.css">
     <title>JH Kits: Buy and Sell Model Kits!</title>
-    <?php include 'header.php'; ?>
-
 </head>
 
 <body>

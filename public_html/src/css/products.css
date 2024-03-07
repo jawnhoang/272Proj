@@ -1,0 +1,27 @@
+
+#submit{
+    background-color:#1aacf0; 
+    border-radius: 10px;
+    width: 75px;
+    height: 50px;
+}
+
+.button_filter{
+    margin-top: 30px;
+    text-align: center;
+}
+
+#submit:hover{
+    background-color: #1486bb;
+}
+
+#submit:active{
+    background-color: #5690ac;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.item_showcase{
+    margin-top: 50px;
+    text-align: center;
+}

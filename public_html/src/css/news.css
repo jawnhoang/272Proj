@@ -1,0 +1,18 @@
+.news-header{
+    text-align: center;
+}
+
+.news_card{
+    /* flex: 30%; width of left side col sidebar */
+    background-color: #dfdfdf; /* Grey background color */
+    padding: 10px; /* Some padding */
+    border-radius: 10px;
+    width: 20%;
+}
+
+.news_card:hover{
+    background-color: #ddd;
+    color: black;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;  
+}

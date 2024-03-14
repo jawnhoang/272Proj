@@ -24,7 +24,7 @@
                     <polygon id='beak' points="180,70 120,70 150, 100" fill="yellow" />
                     <ellipse id='Leye' cx="120" cy="73" rx="10" ry="10" fill="black" />
                     <ellipse id='Reye' cx="180" cy="73" rx="10" ry="10" fill="black" />
-                    <ellipse id='Lfeet' cx="100" cy="275" rx="40" ry="15" fill="black" stroke="white" />
+                    <ellipse id='Lfeet' cx=" 100" cy="275" rx="40" ry="15" fill="black" stroke="white" />
                     <ellipse id='Rfeet' cx="200" cy="275" rx="40" ry="15" fill="black" stroke="white" />
                     <ellipse id='Larm' cx="68" cy="150" rx="20" ry="60" fill="black" stroke="white" />
                     <ellipse id='Rarm' cx="230" cy="150" rx="20" ry="60" fill="black" stroke="white" />

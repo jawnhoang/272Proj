@@ -43,6 +43,13 @@ body{
   display: none;
 }
 
+#register, #login, #logout{
+  float: right;
+}
+
+
+
+
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("About Me"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .nav a:not(:first-child) {display: none;}
@@ -66,3 +73,11 @@ body{
     text-align: left;
   }
 }
+
+
+<?php if(!isset($_SESSION['username']))
+echo "<a id='login' href=\"login.php\">Login</a>
+      <a id='register' href=\"register.php\">Register</a>"; ?> 
+
+<?php if(isset($_SESSION['username']))
+echo "<a id='logout' href=\"logout.php\">Logout</a>"; ?>

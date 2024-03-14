@@ -9,6 +9,14 @@
             <a href="products.php">Products</a> 
             <a href="news.php">News</a> 
             <a href="contact.php">Contact</a>
+            <?php session_start(); ?>
+            <?php if(!isset($_SESSION['username']))
+                echo "<a id='login' href=\"login.php\">Login</a>
+                      <a id='register' href=\"register.php\">Register</a>"; ?> 
+
+              <?php if(isset($_SESSION['username']))
+                echo "<a id='logout' href=\"logout.php\">Logout</a>"; ?>
+
             <a href="javascript:void(0);" class="icon" onclick="navDropDown();">
                 <i class="fa fa-bars"></i>
             </a>

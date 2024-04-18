@@ -18,7 +18,7 @@
                 </h2>
                 <div class = 'site_row'>
                     <div class='image'>
-                        <img id = 'site_pic' src='\public_html\src\images\image.png'>
+                        <img id = 'site_pic' src='src\images\image.png'>
                     </div>
                     <div class='site_users'>
                         <p>Site Users</p>

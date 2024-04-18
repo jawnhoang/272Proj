@@ -20,6 +20,10 @@
             <a href="javascript:void(0);" class="icon" onclick="navDropDown();">
                 <i class="fa fa-bars"></i>
             </a>
+
+            <a href="hub.php">Hub</a>
+
+
         </nav>
     <script>
           /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */

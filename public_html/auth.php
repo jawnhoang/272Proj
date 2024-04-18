@@ -72,4 +72,5 @@
             }
         ?>
     </header>
+<?php include 'footer.php';?>
 </html>

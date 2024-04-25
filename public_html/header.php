@@ -9,12 +9,12 @@
             <a href="products.php">Products</a> 
             <a href="news.php">News</a> 
             <a href="contact.php">Contact</a>
-            <?php session_start(); ?>
-            <?php if(!isset($_SESSION['username']))
+            <?php session_start();
+            if(!isset($_SESSION['username']))
                 echo "<a id='login' href=\"login.php\">Login</a>
-                      <a id='register' href=\"register.php\">Register</a>"; ?> 
+                      <a id='register' href=\"register.php\">Register</a>";
 
-              <?php if(isset($_SESSION['username']))
+            if(isset($_SESSION['username']))
                 echo "<a id='logout' href=\"logout.php\">Logout</a>"; ?>
 
             <a href="javascript:void(0);" class="icon" onclick="navDropDown();">
@@ -22,6 +22,7 @@
             </a>
 
             <a href="hub.php">Hub</a>
+            <a href="users.php">Users</a>
 
 
         </nav>

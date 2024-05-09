@@ -1,8 +1,24 @@
 <?php
 //include db connection
-include 'db_connection.php';
-// Start the session
-session_start();
+// include 'db_connection.php';
+// // Start the session
+// session_start();
+function OpenCon(){
+    $servername = "localhost";
+    // $username = "wjymfdmy_jswplat";
+    $username = "root";
+    // $password = "Khoa.bluehost123";
+    $password = "Khoa.mysql123";
+    $db = "wjymfdmy_WPR7U";
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password,$db) or die("Connection failed: %s\n". $conn->error);
+    return $conn;
+}
+
+function CloseCon($conn){
+    $conn -> close();
+}
+
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -31,8 +47,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //REVISIT WHY PASSWORD_VERIFY NOT WORKING!!!!!!
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
-        if (password_verify($password, $row['password'])) {
+        if ($password == $row['password']) {
             // Password is correct, start session and redirect to home page
+            session_start();
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['email'] = $row['email'];
             header("Location: index.php");

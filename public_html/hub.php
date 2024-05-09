@@ -18,7 +18,7 @@
                 </h2>
                 <div class = 'site_row'>
                     <div class='image'>
-                        <img id = 'site_pic' src='src\images\image.png'>
+                        <img id = 'site_pic' src='src\images\next.png'>
                     </div>
                     <div class='site_users'>
                         <p>Site Users</p>
@@ -42,6 +42,39 @@
                     </div>
                 </div>
                 <a href="https://coursework-272-ed6fb0eee728.herokuapp.com" id='link'>Visit Next</a> 
+            </div>
+            <br><br><br>
+            <div class = 'hub_card' >
+                <h2 class='hub_card_header'>
+                GoCommerce
+
+                </h2>
+                <div class = 'site_row'>
+                    <div class='image'>
+                        <img id = 'site_pic' src='src\images\goComm.png'>
+                    </div>
+                    <div class='site_users'>
+                        <p>Site Users</p>
+                        <?php
+                        $ch = curl_init("https://thinh-cmpe-272.000webhostapp.com/phpecom/users.txt");
+                        $fp = fopen("goComm_info.txt", "w");
+                        curl_setopt($ch, CURLOPT_FILE, $fp);
+                        curl_setopt($ch, CURLOPT_HEADER, 0);
+
+                        curl_exec($ch);
+                        curl_close($ch);
+                        fclose($fp);
+                        $myfile = fopen("goComm_info.txt", "r");
+                            if($myfile == false){
+                                echo "Error in accessing Contact information";
+                            }
+                        $filetxt = fread($myfile,filesize("goComm_info.txt"));
+                        echo nl2br($filetxt);
+                        fclose($myfile)
+                            ?>
+                    </div>
+                </div>
+                <a href="https://thinh-cmpe-272.000webhostapp.com/phpecom/index.php" id='link'>Visit GoCommerce</a> 
             </div>
 
 

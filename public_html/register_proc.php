@@ -1,13 +1,27 @@
 <?php
-include 'db_connection.php';
+// include 'db_connection.php';
 // Start the session
-session_start();
+// session_start();
+function OpenCon(){
+    $servername = "localhost";
+    $username = "wjymfdmy_jswplat";
+    $password = "Khoa.bluehost123";
+    $db = "wjymfdmy_WPR7U";
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password,$db) or die("Connection failed: %s\n". $conn->error);
+    return $conn;
+}
+
+function CloseCon($conn){
+    $conn -> close();
+}
+
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate and sanitize input
-    $first_name = filter_input(INPUT_POST, 'firstName', FILTER_SANITIZE_SPECIAL_CHARS);
-    $last_name = filter_input(INPUT_POST, 'lastName', FILTER_SANITIZE_SPECIAL_CHARS);
+    $firstName = filter_input(INPUT_POST, 'firstName', FILTER_SANITIZE_SPECIAL_CHARS);
+    $lastName = filter_input(INPUT_POST, 'lastName', FILTER_SANITIZE_SPECIAL_CHARS);
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     $password = $_POST['password'];
     $home_addr = filter_input(INPUT_POST, 'home_addr', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -32,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare SQL statement to insert user into the database
-    $sql = "INSERT INTO users (first_name, last_name, email, password, home_addr, home_phone, cell_phone) VALUES ('$first_name', '$last_name', '$email', '$hashed_password', '$home_addr', '$home_phone', '$cell_phone')";
+    $sql = "INSERT INTO users (firstName, lastName, email, password, home_addr, home_phone, cell_phone) VALUES ('$firstName', '$lastName', '$email', '$password', '$home_addr', '$home_phone', '$cell_phone')";
     
     // Execute SQL statement
     if ($conn->query($sql) === TRUE) {

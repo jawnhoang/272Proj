@@ -7,7 +7,23 @@
         <?php include("header.php"); ?>
     <?php
             //include db connection
-            include 'db_connection.php';
+            // include 'db_connection.php';
+            function OpenCon(){
+        	$servername = "localhost";
+        	// $username = "wjymfdmy_jswplat";
+            $username = "root";
+        	// $password = "Khoa.bluehost123";
+            $password = "Khoa.mysql123";
+                $db = "wjymfdmy_WPR7U";
+                // Create connection
+                $conn = mysqli_connect($servername, $username, $password,$db) or die("Connection failed: %s\n". $conn->error);
+                return $conn;
+            }
+            
+            function CloseCon($conn){
+                $conn -> close();
+            }
+            
 
             // Check if the form is submitted
             if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -23,7 +39,7 @@
                 }
 
                 // Prepare SQL statement to search for matching records
-                $sql = "SELECT * FROM users WHERE first_name LIKE ?";
+                $sql = "SELECT * FROM users WHERE firstName LIKE ?";
                 $stmt = $conn->prepare($sql);
                 if (!$stmt) {
                     die("Error: " . $conn->error);
@@ -63,8 +79,8 @@
                                     User:
                                 </h2>
                                 <p id=\"users\">');
-                    echo "First Name: " . $row["first_name"] . "<br>";
-                    echo "Last Name: " . $row["last_name"] . "<br>";
+                    echo "First Name: " . $row["firstName"] . "<br>";
+                    echo "Last Name: " . $row["lastName"] . "<br>";
                     echo "Email: " . $row["email"] . "<br>";
                     echo "Home Phone: " . $row["home_phone"] . "<br>";   
                 print('</p></div></div>');

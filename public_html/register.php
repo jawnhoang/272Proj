@@ -15,7 +15,7 @@
                     <input type="text" id="fname" name="firstName" placeholder="First Name" oninput="this.value = capitalizeFirstLetter(this.value)"><br><br>
                     <input type="text" id="lname" name="lastName" placeholder="Last Name" oninput="this.value = capitalizeFirstLetter(this.value)"><br><br>
                     <input type="text" id="email" name="email" placeholder="Email"><br><br>
-                    <input type="text" id="password" name="password" placeholder="Password" oninput="maskPassword()"><br><br>
+                    <input type="text" id="password" name="password" placeholder="Password"><br><br>
                     <input type="text" id="home_addr" name="home_addr" placeholder="Home Address"><br><br>
                     <input type="text" id="home_phone" name="home_phone" placeholder="Home Phone #"><br><br>
                     <input type="text" id="cell_phone" name="cell_phone" placeholder="Cell Phone #"><br><br>
